@@ -1,0 +1,261 @@
+.fl{
+    float: left;
+}
+
+.pagin{
+    /* position: absolute;
+    left:0; */
+    /* margin-top: 20px; */
+    float: right;
+}
+
+.w200{
+    width:200px !important;
+}
+.w130{
+    width: 130px !important;
+}
+.icons{
+    font-size: 16px;
+    margin: auto 5px;
+    cursor: pointer;
+}
+
+/* model  动画 */
+.modelBody-enter-active{
+    animation: entModel .3s linear  forwards;
+}
+.modelBody-leave-active{
+    animation: leavmodel .3s linear  forwards;    
+}
+/* model 抽屉动画 */
+@keyframes entModel {
+    0%{
+        transform: translateX(720px)
+    }
+    100%{
+        transform:  translateX(0)
+    }
+}
+@keyframes leavmodel {
+    0%{
+        transform: translate(0)
+    }
+    100%{
+        transform: translate(720px)
+    }
+}
+
+/* model  动画 */
+.shades-enter-active{
+    animation: shadeIn .3s linear  forwards;
+}
+.shades-leave-active{
+    animation: shadeOut .3s linear  forwards;    
+}
+/* model 抽屉动画 */
+@keyframes shadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes shadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+.lookInput>input:disabled { 
+    background: white !important; 
+    border:none;
+    cursor:progress;
+    /* color:red !important; */
+}
+.lookInput>textarea:disabled {
+    background: white !important; 
+    border:none;
+}
+
+
+.Z-toast{
+    position: fixed;
+    height:50px;
+    width:200px;
+    top:20%;
+    left:50%;
+    margin-top: -25px;
+    margin-left: -100px;
+    background-color: rgba(0, 0, 0, 0.644);
+    z-index: 999999;
+    border-radius: 7px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    opacity: 0;
+    animation: toast 2s linear;
+}
+@keyframes toast{
+    0%{
+        top:15%;
+    }
+    10%{
+        opacity: 1;
+        top:20%;
+    }
+    80%{
+        opacity: 1;
+        top:20%;
+    }
+    100%{
+        opacity: 0;
+        top: 15%;
+    }
+}
+
+
+
+/* //上传图片的样式 */
+.upBox{
+    margin-top: 15px;
+    overflow: hidden;
+}
+.upBox > div{
+    float: left;
+}
+.upBox img{
+    margin: 5px 0 0 7px;
+    max-width: 200px;
+    max-height:200px;
+}
+.img-txt{
+    line-height: 28px;
+    width:70px;
+    text-align: right;
+    color:#535354;
+}
+.img-size{
+    font-size: 12px;
+    line-height:28px;
+    color:#F56C6C;
+    margin-left: 10px;
+}
+.img-box{
+    width: 100px;
+    height:28px;
+    border-radius: 5px;
+    border:1px solid #dcdfe6;
+    margin-left: 8px;
+    text-align: center;
+    line-height: 28px;
+    color:#535354;
+    position: relative;
+}
+.img-box>input{
+    opacity: 0;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.Box-img{
+    margin:4px 0 0 5px;
+    max-width: 200px;
+    max-height: 200px;
+}
+.img-max{
+    margin-top: 10px;
+    max-width: 200px;
+    max-height: 200px;
+}
+/* <div class="upBox">
+          <div class="img-txt">广告图片</div>
+          <div>
+            <div class="img-box">上传图片
+              <input type="file">
+            </div>
+            <img src="./../../../assets/logo.png" alt="">
+          </div>
+          <div class="img-size">建议大小</div>
+        </div> */
+
+/* input框样式 */
+.model-input{
+    margin-top: 15px !important;
+}
+.model-input>span{
+    display: inline-block;
+    width: 72px;
+    text-align: right;
+    box-sizing: border-box;
+    padding-right: 5px;
+    color:#535354;
+    /* margin-top: 10px; */
+}
+/* <div class='model-input'>
+          <span>234</span>
+          <el-input v-model="serch" class="w200" size="mini" placeholder="用户名或手机号"></el-input>
+        </div> */
+
+
+
+/* textarea */
+.textar{
+    overflow: hidden;
+    margin: 15px 0;
+}
+.textar > div{
+    float: left;
+}
+.textar-title{
+    width:70px;
+    text-align: right;
+    margin-right: 5px;
+    color:#535354;
+}
+.textar-content{
+    resize: none;
+    border:1px solid #dcdfe6;
+    border-radius: 5px;
+    width: 400px;
+    height:100px;
+    box-sizing: border-box;
+    padding:10px;
+    color:#535354;
+    font-size: 12px;
+}
+/* <div class="textar">
+          <div class="textar-title">教师简介:</div>
+          <div>
+            <textarea v-model="tabModel.teacher_data" class="textar-content"></textarea>
+          </div>
+        </div> */
+
+
+/* 提交按钮 */
+.upBtn{
+    margin:30px 0 50px 80px !important;
+}
+
+
+
+/* 修改滚动条 */
+/* 修改全局scoll样式 */
+::-webkit-scrollbar {
+    width: 6px !important;
+    height: 16px;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #409eff;
+}
